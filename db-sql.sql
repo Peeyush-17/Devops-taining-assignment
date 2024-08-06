@@ -15,10 +15,10 @@ USE `db_contact`;
 DROP TABLE IF EXISTS `tbl_contact`;
 CREATE TABLE `tbl_contact` (
   `id` int(11) NOT NULL,
-  `fldName` varchar(50) NOT NULL,
-  `fldEmail` varchar(150) NOT NULL,
-  `fldPhone` varchar(15) NOT NULL,
-  `fldMessage` text NOT NULL
+  `Name` varchar(50) NOT NULL,
+  `Email` varchar(150) NOT NULL,
+  `Phone` varchar(15) NOT NULL,
+  `Message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
