@@ -23,7 +23,7 @@ $password = "1234";
 $conn = new mysqli($servername, $username, $password, 'db_contact');
 echo "Connected";
 // database insert SQL code
-$sql = "INSERT INTO `tbl_contact` (`Id`, `fldName`, `fldEmail`, `fldPhone`, `fldMessage`) VALUES ('0', '$txtName', '$txtEmail', '$txtPhone', '$txtMessage')";
+$sql = "INSERT INTO `tbl_contact` (`Id`, `Name`, `Email`, `Phone`, `Message`) VALUES ('0', '$txtName', '$txtEmail', '$txtPhone', '$txtMessage')";
 echo "Record Inserted";
 // insert in database 
 $rs = mysqli_query($conn, $sql);
