@@ -1,7 +1,7 @@
 <h1>A Two Tier Application Consisting of a PHP Frontend and a MYSQL Backend Running on Individual Containers.</h1>
 
 <h4>1. Creating the backend.sh to automate the backend. The backend runs a mysql-server container and hosts the Table that stores data from the frontend.The script installs docker in the backend instance and runs the mysql-server container from dockerhub. Then, running the mysql script using docker exec creates the backend.</h4>
-  <h5>MYSQL Script - https://github.com/suchintannit/Assignment_Devops/blob/main/db-sql.sql</h5>
+  <h5>MYSQL Script - https://github.com/Peeyush-17/Devops-training-assignment/blob/main/db-sql.sql</h5>
 
 ```
 #Install Docker in the Backend
@@ -55,9 +55,9 @@ sudo docker run -dp 80:80 --link mydb:mydb 4bda355c9da1
 <h3> How the Frontend Container is created.</h3>
 The Frontend Container is a simple PHP application that takes user input using HTML forms and stores the data in the container running the backend. The frontend container is created using the 3 files.
   
-1. index.html - https://github.com/suchintannit/Assignment_Devops/blob/main/contact.php 
-2. contact.php - https://github.com/suchintannit/Assignment_Devops/blob/main/index.html
-3. db-sql.sql - https://github.com/suchintannit/Assignment_Devops/blob/main/db-sql.sql
+1. index.html - https://github.com/Peeyush-17/Devops-training-assignment/blob/main/contact.php 
+2. contact.php - https://github.com/Peeyush-17/Devops-training-assignment/blob/main/index.html
+3. db-sql.sql - https://github.com/Peeyush-17/Devops-training-assignment/blob/main/db-sql.sql
 
 Once these file are written in any directory, a Dockerfile can be created as shown below,
 ```
@@ -76,8 +76,8 @@ The Dockerfile (when build as an image) copies the ubuntu image and makes the fr
 After writing the Dockerfile the image can be build and pushed to dockerhub using the following command:
 ```
 sudo docker build -t frontend
-sudo docker tag frontend suchintantraining/frontend
-sudo docker push suchintantraining/frontend
+sudo docker tag frontend peeyush17/todo-web-application-h2
+sudo docker push peeyush17/todo-web-application-h2
 ```
 <h4>Creating the AWS Infrastructure to run both the Containers in the Same Instance</h4>
 
